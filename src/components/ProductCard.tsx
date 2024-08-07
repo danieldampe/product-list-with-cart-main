@@ -27,9 +27,9 @@ export const ProductCard: React.FC<Props> = (product) => {
       <div className='relative'>
         <div className={`border-2 rounded-md overflow-hidden ${isProductInCart ? 'border-red' : ''}`}>
           <picture>
-            <source media={`(min-width: ${breakpoints.desktop}px)`} srcSet={image.desktop} />
-            <source media={`(min-width: ${breakpoints.tablet}px)`} srcSet={image.tablet} />
-            <img src={image.mobile} alt={name} />
+            <source media={`(min-width: ${breakpoints.desktop}px)`} srcSet={'/images/' + image.desktop} />
+            <source media={`(min-width: ${breakpoints.tablet}px)`} srcSet={'/images/' + image.tablet} />
+            <img src={'/images/' + image.mobile} alt={name} />
           </picture>
         </div>
         <div className='absolute left-2/4 -translate-x-2/4 -translate-y-2/4'>
