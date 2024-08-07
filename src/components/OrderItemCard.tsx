@@ -1,5 +1,6 @@
 import { ProductInCart } from '../types'
 import { formatPrice } from '../utilities/format-price'
+import { getImageURL } from '../utilities/get-image-url'
 
 type Props = Pick<ProductInCart, 'name' | 'price' | 'quantity' | 'image'>
 
@@ -12,7 +13,7 @@ export const OrderItemCard: React.FC<Props> = ({ name, price, quantity, image })
     <div className='flex justify-between items-center py-4 border-b-2 border-[#f5f5f5]'>
       <div className='flex items-center gap-x-4'>
         <div className='size-12 rounded-md overflow-hidden'>
-          <img src={'/images/' + image.thumbnail} alt={name} />
+          <img src={getImageURL(image.thumbnail)} alt={name} />
         </div>
         <div className='space-y-2'>
           <div>
